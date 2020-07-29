@@ -1,5 +1,7 @@
 package _01_introduction_to_encapsulation;
 
+import static org.junit.Assert.assertEquals;
+
 /*
  * Encapsulation is a way of protecting the data in a class from being
  * unintentionally altered from another class.
@@ -19,10 +21,62 @@ package _01_introduction_to_encapsulation;
 public class EncapsulateTheData {
 	//1. Encapsulate the member variables.
 	//   Add restrictions to the setters according to the comment.
-	
+
+	int get() {
+		return itemsReceived;
+	}
+	void set(int itemsReceived) {
+		if (itemsReceived >= 0) {
+		this.itemsReceived = itemsReceived;
+		}
+		else {
+			this.itemsReceived = 0;
+		}
+	}
+	float get2() {
+		return degreesTurned;
+	}
+	void set2(float degreesTurned) {
+		if (degreesTurned >= 0 && degreesTurned <=360) {
+			this.degreesTurned = degreesTurned;
+		}
+		else if (degreesTurned < 0) {
+			while (degreesTurned < 0) {
+				degreesTurned += 360;
+			}
+			this.degreesTurned = degreesTurned;
+		}
+		else if (degreesTurned > 360) {
+			while (degreesTurned > 360) {
+				degreesTurned-=360;
+			}
+			this.degreesTurned = degreesTurned;
+		}
+	}
+	String get3() {
+		return nomenclature;
+	}
+	void set3(String nomenclature) {
+		if (nomenclature.equals("")) {
+			this.nomenclature = " ";
+		}
+		else {
+			this.nomenclature = nomenclature;
+		}
+	}
+	Object get4() {
+		return memberObj;
+	}
+	void set4(Object memberObj) {
+		if (memberObj instanceof String) {
+			this.memberObj = new Object();
+		}
+		else {
+			this.memberObj = memberObj;
+		}
+	}
 	//2. Create a new JUnit Test case and write tests to verify that 
 	//   the member variables' getters and setters are working
-	
 	int itemsReceived; //must not be negative. All negative arguments get set to 0.
 	float degreesTurned; //must be locked between 0.0 and 360.0 inclusive.
 	String nomenclature = " "; //must not be set to a blank string. Blank Strings get set to a space
