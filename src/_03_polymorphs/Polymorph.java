@@ -3,10 +3,10 @@ package _03_polymorphs;
 import java.awt.Graphics;
 
 public abstract class Polymorph {
-    int x;
-    int y;
-    int width;
-    int height;
+    protected int x;
+    protected int y;
+    protected int width;
+    protected int height;
     
     void setWidth(int width) {
     	this.width = width;
