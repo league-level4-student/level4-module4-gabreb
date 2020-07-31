@@ -27,7 +27,7 @@ public class HospitalTest extends TestCase {
 	}
 
 	public void testAddPatient() throws Exception {
-		testHospital.addPatient(new Patient());
+     	testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
 		assertEquals(3, testHospital.getPatients().size());
@@ -35,16 +35,16 @@ public class HospitalTest extends TestCase {
 
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
-		Doctor testDoctor = new Doctor();
+	    Doctor testDoctor = new Doctor();
 		assertEquals(false, testDoctor.performsSurgery());
 
 		Doctor testSurgeon = new Surgeon();
 		assertEquals(true, testSurgeon.performsSurgery());
 
-		GeneralPractitioner testGP = new GeneralPractitioner();
-		assertEquals(true, testGP.makesHouseCalls());
-		assertEquals(false, testSurgeon.makesHouseCalls());
-		assertEquals(false, testDoctor.makesHouseCalls());
+	    GeneralPractitioner testGP = new GeneralPractitioner();
+	    assertEquals(true, testGP.makesHouseCalls());
+	    assertEquals(false, testSurgeon.makesHouseCalls());
+	    assertEquals(false, testDoctor.makesHouseCalls());
 	}
 
 	/* A doctor has a list of patients */
@@ -81,7 +81,7 @@ public class HospitalTest extends TestCase {
 	}
 
 	/* test calling assignPatient when doctor is full throws exception */
-	public void testDoctorsCanOnlyHandle3Patients() throws Exception {
+	public void testDoctorsCanOnlyHandle3Patients() throws Exception{
 		Doctor testDoctor = new Doctor();
 		testDoctor.assignPatient(new Patient());
 		testDoctor.assignPatient(new Patient());
@@ -97,9 +97,18 @@ assertTrue(testDoctor.getPatients().size() == 3);
 
 	public void test8Patients() throws Exception {
 		// TODO: add 3 doctors to hospital
-
+testHospital.addDoctor(new Doctor()); 
+testHospital.addDoctor(new Doctor()); 
+testHospital.addDoctor(new Doctor()); 
 		// TODO: add 8 patients to hospital
-
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
 		// hospital assigns patients to doctors
 		testHospital.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
