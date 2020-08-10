@@ -39,12 +39,14 @@ public class Hi {
 		reverseString("Nachos");
 
 		// 6
-		// failure
+		//trying...
+		// failure!
 		// x = 0
 		
 		//7 
 		
 		/* 
+		private int value; 
 		public int get() {
 		return value;
 		}
@@ -58,7 +60,7 @@ public class Hi {
 		*/
 		
 		//8
-		// YOU CAN NOT DO THIS ----> Super t = new Sub(); you can't do this because the sub class extended the super class
+		// YOU CAN NOT DO THIS ----> Sub v = new Super(); you can't do this because the sub class extended the super class
 		// and the super class did not extend the sub class
 		
 		//9
@@ -67,7 +69,7 @@ public class Hi {
 		//10
 		
 		// A comment looks like this:
-		// \\*comment here*\\
+		// \*comment here*\
 		
 		//11
 		String in = JOptionPane.showInputDialog("Enter some words."); 
@@ -109,10 +111,10 @@ public class Hi {
 		//takes to long and I know how to do it
 		
 		//19
-		String codeAllDay = "Code all day.";
-		int indexOfFirstSpace = codeAllDay.indexOf(" ");
-		int indexOfSecondSpace = codeAllDay.indexOf(" ", indexOfFirstSpace + 1); codeAllDay.substring(0, indexOfSecondSpace);
-		String codeAllNight = codeAllDay + " night"; System.out.println(codeAllDay + codeAllNight);
+		//Code all day.Code all day. night
+		
+		//20
+		//runeatpoop
 	}
 	
 	
